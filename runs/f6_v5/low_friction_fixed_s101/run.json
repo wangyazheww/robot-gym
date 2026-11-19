@@ -1,0 +1,180 @@
+{
+  "run_id": "low_friction_fixed_s101",
+  "scene": "tabletop_pick_place",
+  "scene_version": 1,
+  "config_hash": "9d3645e3f8a3",
+  "condition": "low_friction",
+  "mode": "fixed",
+  "seed": 101,
+  "grasp_mode": "contact-confirm + weld-assist (disclosed)",
+  "base_mode": "kinematic_hold",
+  "hidden_params_applied": {
+    "mug_friction_slide": 0.15,
+    "mug_pos_offset_xy": [
+      0.0,
+      0.0
+    ]
+  },
+  "env": {
+    "mujoco": "4.0.1",
+    "python": null,
+    "platform": "darwin"
+  },
+  "result": {
+    "grasp_success": true,
+    "place_success": true,
+    "task_success": true,
+    "failure_reason": null,
+    "failure_detail": null,
+    "events": [
+      {
+        "t": 0.0,
+        "phase": "init",
+        "event": "task_start",
+        "mode": "fixed",
+        "grasp_mode": "contact-confirm + weld-assist (disclosed)"
+      },
+      {
+        "t": 0.75,
+        "phase": "settle",
+        "event": "stand_ok",
+        "pelvis_z": 0.249,
+        "base_mode": "kinematic_hold"
+      },
+      {
+        "t": 0.75,
+        "phase": "approach",
+        "event": "ik_solved",
+        "pregrasp_perr": 0.0,
+        "grasp_perr": 0.0004,
+        "grasp_oerr": 0.018
+      },
+      {
+        "t": 6.25,
+        "phase": "approach",
+        "event": "at_mug",
+        "ee": [
+          -0.086,
+          -0.631,
+          0.437
+        ],
+        "mug": [
+          -0.082,
+          -0.631,
+          0.42
+        ]
+      },
+      {
+        "t": 6.89,
+        "phase": "grasp",
+        "event": "contact_confirmed",
+        "f_left": 0.906,
+        "f_right": 0.986,
+        "gap": 0.025
+      },
+      {
+        "t": 10.75,
+        "phase": "grasp",
+        "event": "weld_assist_engaged",
+        "disclosed": true
+      },
+      {
+        "t": 10.75,
+        "phase": "grasp",
+        "event": "grip_closed",
+        "gap": 0.012,
+        "f_left": 4.718,
+        "f_right": 4.599,
+        "n_contacts": 8
+      },
+      {
+        "t": 14.752,
+        "phase": "lift",
+        "event": "lifted",
+        "clear_cm": 6.5,
+        "tightenings": 0,
+        "grip_tilt_deg": 20.0
+      },
+      {
+        "t": 17.752,
+        "phase": "hold",
+        "event": "hold_done",
+        "clear_cm": 6.6
+      },
+      {
+        "t": 26.454,
+        "phase": "move",
+        "event": "over_tray",
+        "ee": [
+          0.134,
+          -0.636,
+          0.463
+        ],
+        "grip_tilt_deg": 31.1
+      },
+      {
+        "t": 28.954,
+        "phase": "release",
+        "event": "grip_opened"
+      },
+      {
+        "t": 31.954,
+        "phase": "verify",
+        "event": "verify_done",
+        "mug": [
+          0.169,
+          -0.637,
+          0.43
+        ]
+      },
+      {
+        "t": 33.654,
+        "phase": "retreat_done",
+        "event": "retreat_up"
+      },
+      {
+        "t": 33.654,
+        "phase": "retreat_done",
+        "event": "result",
+        "grasp_success": true,
+        "place_success": true,
+        "task_success": true,
+        "failure_reason": null,
+        "failure_detail": null,
+        "metrics": {
+          "hold_min_clear_cm": 6.47,
+          "lift_peak_cm": 6.46,
+          "max_finger_force_N": 5.64,
+          "slip_max_mm": 64.9,
+          "tightenings": 0,
+          "mug_final_xy": [
+            0.169,
+            -0.637
+          ],
+          "mug_final_z": 0.43,
+          "mug_final_speed_ms": 0.0,
+          "in_region": true,
+          "unexpected_arm_contacts": 0,
+          "sim_t": 33.65
+        }
+      }
+    ],
+    "metrics": {
+      "hold_min_clear_cm": 6.47,
+      "lift_peak_cm": 6.46,
+      "max_finger_force_N": 5.64,
+      "slip_max_mm": 64.9,
+      "tightenings": 0,
+      "mug_final_xy": [
+        0.169,
+        -0.637
+      ],
+      "mug_final_z": 0.43,
+      "mug_final_speed_ms": 0.0,
+      "in_region": true,
+      "unexpected_arm_contacts": 0,
+      "sim_t": 33.65
+    }
+  },
+  "wall_time_s": 3.4
+}

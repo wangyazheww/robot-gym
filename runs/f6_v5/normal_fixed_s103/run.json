@@ -1,0 +1,126 @@
+{
+  "run_id": "normal_fixed_s103",
+  "scene": "tabletop_pick_place",
+  "scene_version": 1,
+  "config_hash": "9d3645e3f8a3",
+  "condition": "normal",
+  "mode": "fixed",
+  "seed": 103,
+  "grasp_mode": "contact-confirm + weld-assist (disclosed)",
+  "base_mode": "kinematic_hold",
+  "hidden_params_applied": {
+    "mug_pos_offset_xy": [
+      0.0,
+      0.0
+    ]
+  },
+  "env": {
+    "mujoco": "4.0.1",
+    "python": null,
+    "platform": "darwin"
+  },
+  "result": {
+    "grasp_success": false,
+    "place_success": false,
+    "task_success": false,
+    "failure_reason": "force_limit",
+    "failure_detail": "finger force 31.2N > 30.0N for 2 ticks in grasp",
+    "events": [
+      {
+        "t": 0.0,
+        "phase": "init",
+        "event": "task_start",
+        "mode": "fixed",
+        "grasp_mode": "contact-confirm + weld-assist (disclosed)"
+      },
+      {
+        "t": 0.75,
+        "phase": "settle",
+        "event": "stand_ok",
+        "pelvis_z": 0.249,
+        "base_mode": "kinematic_hold"
+      },
+      {
+        "t": 0.75,
+        "phase": "approach",
+        "event": "ik_solved",
+        "pregrasp_perr": 0.0,
+        "grasp_perr": 0.0,
+        "grasp_oerr": 0.177
+      },
+      {
+        "t": 6.25,
+        "phase": "approach",
+        "event": "at_mug",
+        "ee": [
+          -0.155,
+          -0.632,
+          0.401
+        ],
+        "mug": [
+          -0.151,
+          -0.632,
+          0.388
+        ]
+      },
+      {
+        "t": 7.01,
+        "phase": "grasp",
+        "event": "contact_confirmed",
+        "f_left": 1.607,
+        "f_right": 1.722,
+        "gap": 0.023
+      },
+      {
+        "t": 10.29,
+        "phase": "grasp",
+        "event": "fail",
+        "reason": "force_limit",
+        "detail": "finger force 31.2N > 30.0N for 2 ticks in grasp"
+      },
+      {
+        "t": 10.29,
+        "phase": "grasp",
+        "event": "result",
+        "grasp_success": false,
+        "place_success": false,
+        "task_success": false,
+        "failure_reason": "force_limit",
+        "failure_detail": "finger force 31.2N > 30.0N for 2 ticks in grasp",
+        "metrics": {
+          "hold_min_clear_cm": null,
+          "lift_peak_cm": 0.0,
+          "max_finger_force_N": 42.04,
+          "slip_max_mm": 0.0,
+          "tightenings": 0,
+          "mug_final_xy": [
+            -0.155,
+            -0.633
+          ],
+          "mug_final_z": 0.357,
+          "mug_final_speed_ms": 0.0082,
+          "in_region": false,
+          "unexpected_arm_contacts": 0,
+          "sim_t": 10.29
+        }
+      }
+    ],
+    "metrics": {
+      "hold_min_clear_cm": null,
+      "lift_peak_cm": 0.0,
+      "max_finger_force_N": 42.04,
+      "slip_max_mm": 0.0,
+      "tightenings": 0,
+      "mug_final_xy": [
+        -0.155,
+        -0.633
+      ],
+      "mug_final_z": 0.357,
+      "mug_final_speed_ms": 0.0082,
+      "in_region": false,
+      "unexpected_arm_contacts": 0,
+      "sim_t": 10.29
+    }
+  },
+  "wall_time_s": 1.8
+}

@@ -1,0 +1,47 @@
+<mujoco model="gym_demo_env">
+  <asset>
+    <!-- The scan is Y-up; its 80.8 mm height maps to the 100 mm contact cylinder. -->
+    <mesh name="mug_vis" file="mug_visual.stl" scale="0.88 1.2375 0.88" />
+    <mesh name="mug_col" file="mug_collision.stl" />
+    <mesh name="tray_m" file="tray.stl" />
+    <mesh name="carton_m" file="carton.stl" />
+    <texture name="wood" type="2d" builtin="checker" rgb1="0.55 0.4 0.28" rgb2="0.45 0.32 0.22" width="256" height="256" />
+    <material name="mat_wood" texture="wood" texuniform="true" />
+    <material name="mat_mug" rgba="0.85 0.87 0.9 1" />
+    <material name="mat_tray" rgba="0.8 0.72 0.55 1" />
+    <material name="mat_carton" rgba="0.72 0.55 0.35 1" />
+  </asset>
+  <worldbody>
+    <body name="table" pos="0.5 -0.68 0.35">
+      <geom name="table_top" type="box" size="0.6 0.4 0.02" material="mat_wood" friction="0.8 0.01 0.002" />
+      <geom name="table_leg1" type="box" size="0.03 0.03 0.155" pos="-0.55 0.3 -0.175" />
+      <geom name="table_leg2" type="box" size="0.03 0.03 0.155" pos="0.55 0.3 -0.175" />
+      <geom name="table_leg3" type="box" size="0.03 0.03 0.155" pos="-0.55 -0.3 -0.175" />
+      <geom name="table_leg4" type="box" size="0.03 0.03 0.155" pos="0.55 -0.3 -0.175" />
+    </body>
+    <body name="mug" pos="0.474 -0.636 0.42">
+      <freejoint name="mug_joint" />
+      <inertial pos="0 0 0.05" mass="0.25" diaginertia="0.0004 0.0004 0.0003" />
+      <geom name="mug_v" type="mesh" mesh="mug_vis" pos="-0.0086 0.0008 0" quat="0 0 0.7071067812 0.7071067812" material="mat_mug" contype="0" conaffinity="0" group="2" />
+      <geom name="mug_c" type="cylinder" size="0.0305 0.05" friction="0.7 0.01 0.002" solref="0.005 1" group="1" rgba="0 0 0 0" />
+    </body>
+    <!-- 托盘：视觉网格 + 碰撞代理（PRD F2.2）。
+         网格按凸体碰撞会让杯子落在托盘"顶面"；代理（底板+四壁）使杯子
+         物理落入托盘内部，放置判定不再依赖凸体妥协。 -->
+    <body name="tray" pos="0.60 -0.636 0.372">
+      <freejoint name="tray_joint" />
+      <inertial pos="0 0 0.005" mass="0.4" diaginertia="0.002 0.0015 0.0035" />
+      <geom name="tray_v" type="mesh" mesh="tray_m" material="mat_tray" contype="0" conaffinity="0" group="2" />
+      <geom name="tray_bottom" type="box" size="0.115 0.085 0.005" pos="0 0 0.002" friction="0.8 0.01 0.002" group="1" material="mat_tray" />
+      <geom name="tray_wall_px" type="box" size="0.003 0.091 0.016" pos="0.117 0 0.014" friction="0.8 0.01 0.002" group="1" material="mat_tray" />
+      <geom name="tray_wall_nx" type="box" size="0.003 0.091 0.016" pos="-0.117 0 0.014" friction="0.8 0.01 0.002" group="1" material="mat_tray" />
+      <geom name="tray_wall_py" type="box" size="0.12 0.003 0.016" pos="0 0.089 0.014" friction="0.8 0.01 0.002" group="1" material="mat_tray" />
+      <geom name="tray_wall_ny" type="box" size="0.12 0.003 0.016" pos="0 -0.089 0.014" friction="0.8 0.01 0.002" group="1" material="mat_tray" />
+    </body>
+    <body name="carton" pos="-0.35 -1.3 0.176">
+      <geom name="carton_v" type="mesh" mesh="carton_m" material="mat_carton" friction="0.9 0.01 0.002" group="1" />
+    </body>
+    <camera name="demo_cam" pos="1.2 -1.9 1.1" xyaxes="0.8 0.6 0 -0.3 0.4 0.9" />
+    <camera name="grip_cam" pos="0.95 -1.15 0.85" xyaxes="0.75 0.66 0 -0.28 0.32 0.9" />
+  </worldbody>
+</mujoco>

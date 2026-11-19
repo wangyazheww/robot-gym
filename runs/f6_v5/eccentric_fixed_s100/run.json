@@ -1,0 +1,95 @@
+{
+  "run_id": "eccentric_fixed_s100",
+  "scene": "tabletop_pick_place",
+  "scene_version": 1,
+  "config_hash": "9d3645e3f8a3",
+  "condition": "eccentric",
+  "mode": "fixed",
+  "seed": 100,
+  "grasp_mode": "contact-confirm + weld-assist (disclosed)",
+  "base_mode": "kinematic_hold",
+  "hidden_params_applied": {
+    "mug_pos_offset_xy": [
+      0.02,
+      0.005
+    ]
+  },
+  "env": {
+    "mujoco": "4.0.1",
+    "python": null,
+    "platform": "darwin"
+  },
+  "result": {
+    "grasp_success": false,
+    "place_success": false,
+    "task_success": false,
+    "failure_reason": "ik_failed",
+    "failure_detail": "pregrasp IK perr=0.354m oerr=1.40rad",
+    "events": [
+      {
+        "t": 0.0,
+        "phase": "init",
+        "event": "task_start",
+        "mode": "fixed",
+        "grasp_mode": "contact-confirm + weld-assist (disclosed)"
+      },
+      {
+        "t": 0.75,
+        "phase": "settle",
+        "event": "stand_ok",
+        "pelvis_z": 0.248,
+        "base_mode": "kinematic_hold"
+      },
+      {
+        "t": 0.75,
+        "phase": "approach",
+        "event": "fail",
+        "reason": "ik_failed",
+        "detail": "pregrasp IK perr=0.354m oerr=1.40rad"
+      },
+      {
+        "t": 0.75,
+        "phase": "approach",
+        "event": "result",
+        "grasp_success": false,
+        "place_success": false,
+        "task_success": false,
+        "failure_reason": "ik_failed",
+        "failure_detail": "pregrasp IK perr=0.354m oerr=1.40rad",
+        "metrics": {
+          "hold_min_clear_cm": null,
+          "lift_peak_cm": 0.0,
+          "max_finger_force_N": 0.0,
+          "slip_max_mm": 0.0,
+          "tightenings": 0,
+          "mug_final_xy": [
+            0.793,
+            -0.619
+          ],
+          "mug_final_z": 0.427,
+          "mug_final_speed_ms": 0.8648,
+          "in_region": false,
+          "unexpected_arm_contacts": 0,
+          "sim_t": 0.75
+        }
+      }
+    ],
+    "metrics": {
+      "hold_min_clear_cm": null,
+      "lift_peak_cm": 0.0,
+      "max_finger_force_N": 0.0,
+      "slip_max_mm": 0.0,
+      "tightenings": 0,
+      "mug_final_xy": [
+        0.793,
+        -0.619
+      ],
+      "mug_final_z": 0.427,
+      "mug_final_speed_ms": 0.8648,
+      "in_region": false,
+      "unexpected_arm_contacts": 0,
+      "sim_t": 0.75
+    }
+  },
+  "wall_time_s": 1.2
+}

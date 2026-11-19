@@ -1,0 +1,44 @@
+{
+  "simulation_run": "carry_ce7f40cdb0a8",
+  "scene_version": "s2_livingroom_v13_907400",
+  "sim_seconds": 40.424,
+  "sample_count": 401,
+  "rig_visual_links": 26,
+  "table_top_m": 0.382,
+  "cup_initial_bottom_m": 0.382,
+  "table_collision_contacts_with_robot_at_sampled_frames": 0,
+  "wheel_initial_floor_penetration_mm": 0,
+  "wheel_max_floor_penetration_mm": 0.977,
+  "wheel_outbound_turns": [
+    2.475,
+    2.371,
+    2.272,
+    2.259
+  ],
+  "wheel_return_turns": [
+    2.449,
+    2.462,
+    2.528,
+    2.534
+  ],
+  "max_cup_tilt_deg": 3.99,
+  "max_cup_yaw_change_deg": 0.514,
+  "lift_clearance_cm": 10.8,
+  "return_xy_error_cm": 1.632,
+  "straight_drive_collision_check": {
+    "command_m": 1.7,
+    "with_table": {
+      "reached": false,
+      "displacement_m": 1.3003,
+      "contacts": [
+        "coffee_table_body",
+        "coffee_table_top"
+      ]
+    },
+    "without_table": {
+      "reached": true,
+      "displacement_m": 1.6699,
+      "contacts": []
+    }
+  }
+}

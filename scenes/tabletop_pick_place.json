@@ -1,0 +1,151 @@
+{
+  "name": "tabletop_pick_place",
+  "version": 1,
+  "description": "P0 主任务的表格场景：站立→接近→接触抓取→抬起保持→移托盘→放置。底座停稳后操作（PRD F3.4），导航走官方策略轨道（独立验证）。",
+  "robot": {
+    "start_xy": [
+      -0.28,
+      -0.636
+    ],
+    "stand_z_range": [
+      0.2,
+      0.3
+    ],
+    "stand_speed_max": 0.04
+  },
+  "objects": {
+    "mug": {
+      "pos": [
+        0.0,
+        -0.63,
+        0.42
+      ],
+      "mass_kg": 0.25,
+      "friction_slide": 0.7,
+      "source": "manual"
+    },
+    "tray": {
+      "pos": [
+        0.135,
+        -0.636,
+        0.372
+      ],
+      "mass_kg": 0.4,
+      "source": "manual"
+    },
+    "carton": {
+      "pos": [
+        -0.35,
+        -1.3,
+        0.176
+      ],
+      "source": "manual"
+    }
+  },
+  "regions": {
+    "tray_region": {
+      "center": [
+        0.135,
+        -0.636
+      ],
+      "half_xy": [
+        0.09,
+        0.06
+      ],
+      "z_band": [
+        0.4,
+        0.465
+      ],
+      "note": "托盘内腔实际范围 x±0.134/y±0.086；区域按内腔放宽（诚实），z 带 0.395-0.45"
+    }
+  },
+  "criteria": {
+    "grasp_lift_cm": 5.0,
+    "grasp_hold_s": 3.0,
+    "place_stable_s": 2.0,
+    "place_speed_max": 0.02,
+    "finger_force_limit_N": 30.0,
+    "contact_force_min_N": 0.3
+  },
+  "control": {
+    "dt": 0.002,
+    "leg_kp": 40.0,
+    "leg_kd": 2.0,
+    "leg_clip": 20.0,
+    "arm_kp": 120.0,
+    "arm_kd": 6.0,
+    "arm_clip": 30.0,
+    "grip_kp": 300.0,
+    "grip_kd": 2.0,
+    "grip_clip": 10.0,
+    "base_mode": "kinematic_hold",
+    "impratio": 100.0,
+    "noslip_iterations": 3
+  },
+  "feedback": {
+    "close_gap_m": 0.012,
+    "min_gap_m": 0.002,
+    "tighten_step_m": 0.004,
+    "max_tighten": 4,
+    "slip_trigger_m": 0.004,
+    "force_drop_trigger_N": 0.5,
+    "resume_after_s": 0.5
+  },
+  "conditions": {
+    "normal": {},
+    "low_friction": {
+      "mug_friction_slide": 0.15,
+      "note": "湿滑杯面：只改杯子滑动摩擦，控制器不可见"
+    },
+    "eccentric": {
+      "mug_pos_offset_xy": [
+        0.02,
+        0.005
+      ],
+      "note": "偏心：杯子偏离抓取中心 2cm，爪闭合需自行找正"
+    }
+  },
+  "seed_jitter": {
+    "xy": 0.003,
+    "yaw_deg": 1.0
+  },
+  "phases": {
+    "settle_s": 8.0,
+    "approach_s": 4.0,
+    "descend_s": 1.5,
+    "grasp_z_offset_m": 0.02,
+    "pregrasp_lift_m": 0.06,
+    "grasp_s": 1.5,
+    "grasp_confirm_timeout_s": 3.0,
+    "lift_s": 4.0,
+    "lift_height_m": 0.08,
+    "hold_s": 3.0,
+    "move_s": 3.0,
+    "release_s": 1.5,
+    "verify_s": 3.0,
+    "retreat_s": 3.0,
+    "place_settle_s": 1.2,
+    "place_bias_xy_m": [
+      0.015,
+      0.0
+    ],
+    "place_descend_m": 0.011,
+    "retreat_lift_m": 0.08,
+    "drop_settle_s": 1.0,
+    "shift_xy_m": [
+      0.0,
+      0.0
+    ],
+    "shift_s": 1.5,
+    "close_force_N": 5.0,
+    "move_corridor_m": 0.53
+  },
+  "home_q": [
+    0.0,
+    1.2,
+    -1.2,
+    0.0,
+    -1.2,
+    0.0
+  ]
+}

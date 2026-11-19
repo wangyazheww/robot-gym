@@ -1,0 +1,46 @@
+{
+  "generated_at": "2026-11-13T12:30:00",
+  "model": "G1-Turbo",
+  "results": [
+    {
+      "image": "IMG_4102.jpg",
+      "status": "ok",
+      "task_id": "6941205",
+      "triangles": 272208,
+      "images": 2,
+      "glb_file": "evidence/A1/IMG_4102.glb",
+      "total_s": null
+    },
+    {
+      "image": "IMG_4107.jpg",
+      "status": "ok",
+      "task_id": "6941467",
+      "triangles": 279136,
+      "images": 2,
+      "glb_file": "evidence/A1/IMG_4107.glb",
+      "total_s": null
+    },
+    {
+      "image": "IMG_4113.jpg",
+      "status": "ok",
+      "task_id": "6941561",
+      "triangles": 274912,
+      "images": 2,
+      "glb_file": "evidence/A1/IMG_4113.glb",
+      "total_s": null
+    },
+    {
+      "image": "IMG_4120.jpg",
+      "status": "ok",
+      "task_id": "6941625",
+      "triangles": 275258,
+      "images": 2,
+      "glb_file": "evidence/A1/IMG_4120.glb",
+      "total_s": null
+    }
+  ],
+  "success": 4,
+  "total": 5,
+  "pass": true,
+  "note": "第5张(IMG_4126 teddy)服务端 status=4 生成失败（重试2次均失败），4/5≥4/5 达标。耗时数据见 logs/api_usage.jsonl 与首轮 report 的 git 历史"
+}

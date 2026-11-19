@@ -1,0 +1,22 @@
+{
+  "id": "preset_plate",
+  "name": "白瓷盘",
+  "category": "plate",
+  "source": {
+    "type": "preset",
+    "image": null,
+    "lux3dTaskId": null
+  },
+  "files": {
+    "visual": "visual.glb",
+    "collision": "collision.obj"
+  },
+  "size_m": [
+    0.2,
+    0.022,
+    0.2
+  ],
+  "mass_kg": 0.4,
+  "friction": 0.8,
+  "articulated": null
+}

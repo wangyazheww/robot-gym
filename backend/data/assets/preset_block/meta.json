@@ -1,0 +1,22 @@
+{
+  "id": "preset_block",
+  "name": "蓝色积木",
+  "category": "block",
+  "source": {
+    "type": "preset",
+    "image": null,
+    "lux3dTaskId": null
+  },
+  "files": {
+    "visual": "visual.glb",
+    "collision": "collision.obj"
+  },
+  "size_m": [
+    0.05,
+    0.05,
+    0.05
+  ],
+  "mass_kg": 0.06,
+  "friction": 0.6,
+  "articulated": null
+}

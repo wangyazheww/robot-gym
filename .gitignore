@@ -1,0 +1,14 @@
+.env
+.env.*
+.venv*/
+node_modules/
+__pycache__/
+*.pyc
+.DS_Store
+logs/
+spikes/s10-sdk2/
+gym/assets/_gen_*.xml
+frontend/public/models/*.glb
+!frontend/public/models/mug*.glb
+!frontend/public/models/carton.glb
+!frontend/public/models/tray.glb

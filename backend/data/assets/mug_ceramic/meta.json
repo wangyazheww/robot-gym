@@ -1,0 +1,32 @@
+{
+  "id": "mug_ceramic",
+  "name": "带咖啡渍的白色陶瓷马克杯",
+  "category": "cup",
+  "source": {
+    "type": "lux3d",
+    "image": "input.jpg",
+    "lux3dTaskId": "6941205"
+  },
+  "files": {
+    "visual": "visual.glb",
+    "collision": "collision.obj"
+  },
+  "size_m": [
+    0.09,
+    0.0785,
+    0.0724
+  ],
+  "transform": {
+    "scale": 0.826364,
+    "translate": [
+      -0.0,
+      0.039252,
+      -0.0
+    ]
+  },
+  "volume_m3": 0.000304,
+  "density_kgm3": 1000.0,
+  "mass_kg": 0.3043,
+  "friction": 0.6,
+  "articulated": null
+}

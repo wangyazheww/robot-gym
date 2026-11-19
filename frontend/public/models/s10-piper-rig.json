@@ -1,0 +1,663 @@
+[
+  {
+    "name": "base_link",
+    "parent": null,
+    "position": [
+      0.0,
+      0.0,
+      0.5
+    ],
+    "quaternion_wxyz": [
+      1.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "meshes": [
+      "base_link"
+    ]
+  },
+  {
+    "name": "arm_base_link",
+    "parent": "base_link",
+    "position": [
+      0.045,
+      0.0,
+      0.067616
+    ],
+    "quaternion_wxyz": [
+      1.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "meshes": [
+      "arm_base_link"
+    ]
+  },
+  {
+    "name": "link1",
+    "parent": "arm_base_link",
+    "position": [
+      0.0,
+      0.0,
+      0.123
+    ],
+    "quaternion_wxyz": [
+      1.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "meshes": [
+      "link1"
+    ],
+    "joint": {
+      "type": "hinge",
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ]
+    }
+  },
+  {
+    "name": "link2",
+    "parent": "link1",
+    "position": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "quaternion_wxyz": [
+      0.04800839893656309,
+      -0.04801339893645233,
+      -0.7054759843729593,
+      -0.7054739843730037
+    ],
+    "meshes": [
+      "link2"
+    ],
+    "joint": {
+      "type": "hinge",
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ]
+    }
+  },
+  {
+    "name": "link3",
+    "parent": "link2",
+    "position": [
+      0.28503,
+      0.0,
+      0.0
+    ],
+    "quaternion_wxyz": [
+      0.6239962607228521,
+      0.0,
+      0.0,
+      -0.7814273265018945
+    ],
+    "meshes": [
+      "link3"
+    ],
+    "joint": {
+      "type": "hinge",
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ]
+    }
+  },
+  {
+    "name": "link4",
+    "parent": "link3",
+    "position": [
+      -0.021984,
+      -0.25075,
+      0.0
+    ],
+    "quaternion_wxyz": [
+      0.7071052811843601,
+      0.707108281185553,
+      0.0,
+      0.0
+    ],
+    "meshes": [
+      "link4"
+    ],
+    "joint": {
+      "type": "hinge",
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ]
+    }
+  },
+  {
+    "name": "link5",
+    "parent": "link4",
+    "position": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "quaternion_wxyz": [
+      0.7071052811843601,
+      -0.707108281185553,
+      0.0,
+      0.0
+    ],
+    "meshes": [
+      "link5"
+    ],
+    "joint": {
+      "type": "hinge",
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ]
+    }
+  },
+  {
+    "name": "link6",
+    "parent": "link5",
+    "position": [
+      8.8259e-05,
+      -0.091,
+      0.0
+    ],
+    "quaternion_wxyz": [
+      0.7071052811843601,
+      0.707108281185553,
+      0.0,
+      0.0
+    ],
+    "meshes": [
+      "link6",
+      "gripper_base"
+    ],
+    "joint": {
+      "type": "hinge",
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ]
+    }
+  },
+  {
+    "name": "link7",
+    "parent": "link6",
+    "position": [
+      0.0,
+      0.0,
+      0.1358
+    ],
+    "quaternion_wxyz": [
+      0.7071052811843601,
+      0.707108281185553,
+      0.0,
+      0.0
+    ],
+    "meshes": [
+      "link7"
+    ],
+    "joint": {
+      "type": "slide",
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ]
+    }
+  },
+  {
+    "name": "link8",
+    "parent": "link6",
+    "position": [
+      0.0,
+      0.0,
+      0.1358
+    ],
+    "quaternion_wxyz": [
+      -2.5973410328296305e-06,
+      -2.5973510328336068e-06,
+      -0.7071082811807827,
+      -0.7071052811795898
+    ],
+    "meshes": [
+      "link8"
+    ],
+    "joint": {
+      "type": "slide",
+      "axis": [
+        0.0,
+        0.0,
+        -1.0
+      ]
+    }
+  },
+  {
+    "name": "fl_hipx",
+    "parent": "base_link",
+    "position": [
+      0.2277,
+      0.0574,
+      0.0
+    ],
+    "quaternion_wxyz": [
+      1.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "meshes": [
+      "fl_hipx"
+    ],
+    "joint": {
+      "type": "hinge",
+      "axis": [
+        -1.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "name": "fl_hipy",
+    "parent": "fl_hipx",
+    "position": [
+      0.0,
+      0.0779,
+      0.0
+    ],
+    "quaternion_wxyz": [
+      1.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "meshes": [
+      "fl_hipy"
+    ],
+    "joint": {
+      "type": "hinge",
+      "axis": [
+        0.0,
+        -1.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "name": "fl_knee",
+    "parent": "fl_hipy",
+    "position": [
+      0.0,
+      0.0,
+      -0.18
+    ],
+    "quaternion_wxyz": [
+      1.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "meshes": [
+      "fl_knee"
+    ],
+    "joint": {
+      "type": "hinge",
+      "axis": [
+        0.0,
+        -1.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "name": "fl_wheel",
+    "parent": "fl_knee",
+    "position": [
+      0.0,
+      0.045891,
+      -0.18
+    ],
+    "quaternion_wxyz": [
+      1.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "meshes": [
+      "fl_wheel"
+    ],
+    "joint": {
+      "type": "hinge",
+      "axis": [
+        0.0,
+        -1.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "name": "fr_hipx",
+    "parent": "base_link",
+    "position": [
+      0.2277,
+      -0.0574,
+      0.0
+    ],
+    "quaternion_wxyz": [
+      1.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "meshes": [
+      "fr_hipx"
+    ],
+    "joint": {
+      "type": "hinge",
+      "axis": [
+        -1.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "name": "fr_hipy",
+    "parent": "fr_hipx",
+    "position": [
+      0.0,
+      -0.0779,
+      0.0
+    ],
+    "quaternion_wxyz": [
+      1.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "meshes": [
+      "fr_hipy"
+    ],
+    "joint": {
+      "type": "hinge",
+      "axis": [
+        0.0,
+        -1.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "name": "fr_knee",
+    "parent": "fr_hipy",
+    "position": [
+      0.0,
+      0.0,
+      -0.18
+    ],
+    "quaternion_wxyz": [
+      1.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "meshes": [
+      "fr_knee"
+    ],
+    "joint": {
+      "type": "hinge",
+      "axis": [
+        0.0,
+        -1.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "name": "fr_wheel",
+    "parent": "fr_knee",
+    "position": [
+      0.0,
+      -0.045891,
+      -0.18
+    ],
+    "quaternion_wxyz": [
+      1.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "meshes": [
+      "fr_wheel"
+    ],
+    "joint": {
+      "type": "hinge",
+      "axis": [
+        0.0,
+        -1.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "name": "hl_hipx",
+    "parent": "base_link",
+    "position": [
+      -0.2277,
+      0.0574,
+      0.0
+    ],
+    "quaternion_wxyz": [
+      1.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "meshes": [
+      "hl_hipx"
+    ],
+    "joint": {
+      "type": "hinge",
+      "axis": [
+        -1.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "name": "hl_hipy",
+    "parent": "hl_hipx",
+    "position": [
+      0.0,
+      0.0779,
+      0.0
+    ],
+    "quaternion_wxyz": [
+      1.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "meshes": [
+      "hl_hipy"
+    ],
+    "joint": {
+      "type": "hinge",
+      "axis": [
+        0.0,
+        -1.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "name": "hl_knee",
+    "parent": "hl_hipy",
+    "position": [
+      0.0,
+      0.0,
+      -0.18
+    ],
+    "quaternion_wxyz": [
+      1.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "meshes": [
+      "hl_knee"
+    ],
+    "joint": {
+      "type": "hinge",
+      "axis": [
+        0.0,
+        -1.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "name": "hl_wheel",
+    "parent": "hl_knee",
+    "position": [
+      0.0,
+      0.045891,
+      -0.18
+    ],
+    "quaternion_wxyz": [
+      1.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "meshes": [
+      "hl_wheel"
+    ],
+    "joint": {
+      "type": "hinge",
+      "axis": [
+        0.0,
+        -1.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "name": "hr_hipx",
+    "parent": "base_link",
+    "position": [
+      -0.2277,
+      -0.0574,
+      0.0
+    ],
+    "quaternion_wxyz": [
+      1.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "meshes": [
+      "hr_hipx"
+    ],
+    "joint": {
+      "type": "hinge",
+      "axis": [
+        -1.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "name": "hr_hipy",
+    "parent": "hr_hipx",
+    "position": [
+      0.0,
+      -0.0779,
+      0.0
+    ],
+    "quaternion_wxyz": [
+      1.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "meshes": [
+      "hr_hipy"
+    ],
+    "joint": {
+      "type": "hinge",
+      "axis": [
+        0.0,
+        -1.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "name": "hr_knee",
+    "parent": "hr_hipy",
+    "position": [
+      0.0,
+      0.0,
+      -0.18
+    ],
+    "quaternion_wxyz": [
+      1.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "meshes": [
+      "hr_knee"
+    ],
+    "joint": {
+      "type": "hinge",
+      "axis": [
+        0.0,
+        -1.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "name": "hr_wheel",
+    "parent": "hr_knee",
+    "position": [
+      0.0,
+      -0.045891,
+      -0.18
+    ],
+    "quaternion_wxyz": [
+      1.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "meshes": [
+      "hr_wheel"
+    ],
+    "joint": {
+      "type": "hinge",
+      "axis": [
+        0.0,
+        -1.0,
+        0.0
+      ]
+    }
+  }
+]

@@ -1,0 +1,32 @@
+{
+  "id": "box_carton",
+  "name": "开口的棕色瓦楞纸箱",
+  "category": "box",
+  "source": {
+    "type": "lux3d",
+    "image": "input.jpg",
+    "lux3dTaskId": "6941467"
+  },
+  "files": {
+    "visual": "visual.glb",
+    "collision": "collision.obj"
+  },
+  "size_m": [
+    0.4343,
+    0.5,
+    0.4221
+  ],
+  "transform": {
+    "scale": 0.723852,
+    "translate": [
+      -0.0,
+      0.25,
+      -0.0
+    ]
+  },
+  "volume_m3": 0.073909,
+  "density_kgm3": 1000.0,
+  "mass_kg": 73.9093,
+  "friction": 0.6,
+  "articulated": null
+}

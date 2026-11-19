@@ -1,0 +1,32 @@
+{
+  "id": "banana",
+  "name": "带褐色斑点的黄色香蕉",
+  "category": "fruit",
+  "source": {
+    "type": "lux3d",
+    "image": "input.jpg",
+    "lux3dTaskId": "6941625"
+  },
+  "files": {
+    "visual": "visual.glb",
+    "collision": "collision.obj"
+  },
+  "size_m": [
+    0.18,
+    0.1693,
+    0.0564
+  ],
+  "transform": {
+    "scale": 0.9,
+    "translate": [
+      -0.0,
+      0.08463,
+      -0.0
+    ]
+  },
+  "volume_m3": 0.000696,
+  "density_kgm3": 1000.0,
+  "mass_kg": 0.6958,
+  "friction": 0.6,
+  "articulated": null
+}

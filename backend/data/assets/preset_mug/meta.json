@@ -1,0 +1,22 @@
+{
+  "id": "preset_mug",
+  "name": "红色马克杯",
+  "category": "mug",
+  "source": {
+    "type": "preset",
+    "image": null,
+    "lux3dTaskId": null
+  },
+  "files": {
+    "visual": "visual.glb",
+    "collision": "collision.obj"
+  },
+  "size_m": [
+    0.067,
+    0.1,
+    0.067
+  ],
+  "mass_kg": 0.3,
+  "friction": 0.7,
+  "articulated": null
+}

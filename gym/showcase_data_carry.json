@@ -1,0 +1,414 @@
+{
+ "story": "carry_v1",
+ "scene": {
+  "scene_id": "s2_livingroom",
+  "version_id": "s2_livingroom_v11_ecc37e",
+  "config_hash": "ecc37e5ef26441c5",
+  "pick_region": "A 区矮台（顶 z=0.20）",
+  "place_region": "B 区（-1.2, 0.1）",
+  "nav_path": "A* 规划 3.42m + 1.92m（known-map，伺服辅助行走披露）"
+ },
+ "overall": {
+  "n": 3,
+  "success": 3,
+  "rate": 1.0,
+  "seeds": {
+   "0": {
+    "task_success": true,
+    "grasp_success": true,
+    "place_success": true
+   },
+   "1": {
+    "task_success": true,
+    "grasp_success": true,
+    "place_success": true
+   },
+   "2": {
+    "task_success": true,
+    "grasp_success": true,
+    "place_success": true
+   }
+  }
+ },
+ "grasp_mode": "contact-confirm + weld-assist (disclosed)",
+ "nav_mode": "known-map + servo-assist (disclosed)",
+ "rep_run": {
+  "id": "seed0 (carry_s2_seed0_showcase)",
+  "events": [
+   {
+    "t": 0.0,
+    "phase": "nav",
+    "event": "carry_start",
+    "mode": "feedback",
+    "grasp_mode": "contact-confirm + weld-assist (disclosed)",
+    "nav_mode": "known-map + servo-assist (disclosed)"
+   },
+   {
+    "t": 0.0,
+    "phase": "nav",
+    "event": "approach_point_selected",
+    "pos": [
+     1.13,
+     -0.24
+    ]
+   },
+   {
+    "t": 0.0,
+    "phase": "nav_to_A",
+    "event": "approach_point",
+    "pos": [
+     1.1305407289332279,
+     -0.24392310120488322
+    ]
+   },
+   {
+    "t": 0.0,
+    "phase": "nav_to_A",
+    "event": "planned",
+    "n": 34,
+    "length_m": 3.42
+   },
+   {
+    "t": 90.03,
+    "phase": "nav",
+    "event": "nav_to_A_done",
+    "path_len": 3.42,
+    "waypoints": 34
+   },
+   {
+    "t": 91.03,
+    "phase": "nav",
+    "event": "settled_at_A"
+   },
+   {
+    "t": 111.53,
+    "phase": "nav",
+    "event": "grasp_result",
+    "success": true
+   },
+   {
+    "t": 111.53,
+    "phase": "nav",
+    "event": "stow_for_carry",
+    "arm_q": [
+     0.53,
+     2.1,
+     -0.76,
+     0.0,
+     -1.2,
+     0.0
+    ],
+    "grip_gap": 0.012,
+    "note": "lift 位姿即携物姿态（披露：未单独验证收拢姿态）"
+   },
+   {
+    "t": 111.53,
+    "phase": "nav",
+    "event": "approach_point_selected",
+    "pos": [
+     -0.8,
+     0.1
+    ]
+   },
+   {
+    "t": 111.53,
+    "phase": "carry_to_B",
+    "event": "approach_point",
+    "pos": [
+     -0.7999999999999999,
+     0.1
+    ]
+   },
+   {
+    "t": 111.53,
+    "phase": "carry_to_B",
+    "event": "planned",
+    "n": 19,
+    "length_m": 1.92
+   },
+   {
+    "t": 156.23,
+    "phase": "nav",
+    "event": "carry_to_B_done",
+    "path_len": 1.92,
+    "waypoints": 19
+   },
+   {
+    "t": 157.23,
+    "phase": "nav",
+    "event": "settled_at_B"
+   },
+   {
+    "t": 174.63,
+    "phase": "nav",
+    "event": "place_result",
+    "success": true,
+    "in_region": "True",
+    "v": 0.0,
+    "pos": [
+     -1.203,
+     0.291,
+     0.05
+    ]
+   },
+   {
+    "t": 174.63,
+    "phase": "nav",
+    "event": "carry_result",
+    "success": true
+   },
+   {
+    "t": 91.032,
+    "phase": "approach",
+    "event": "ik_solved",
+    "wp1_perr": 0.0039,
+    "wp2_perr": 0.0049
+   },
+   {
+    "t": 96.532,
+    "phase": "approach",
+    "event": "at_mug",
+    "ee": [
+     1.162,
+     0.028,
+     0.27
+    ],
+    "mug": [
+     1.201,
+     0.148,
+     0.25
+    ]
+   },
+   {
+    "t": 101.532,
+    "phase": "grasp",
+    "event": "advanced",
+    "touch_seq": [
+     "R"
+    ],
+    "ee": [
+     1.208,
+     0.126,
+     0.243
+    ],
+    "mug": [
+     1.206,
+     0.146,
+     0.251
+    ]
+   },
+   {
+    "t": 102.772,
+    "phase": "grasp",
+    "event": "contact_confirmed",
+    "f_left": 1.949,
+    "f_right": 1.401
+   },
+   {
+    "t": 106.032,
+    "phase": "grasp",
+    "event": "weld_assist_engaged",
+    "disclosed": true
+   },
+   {
+    "t": 106.032,
+    "phase": "grasp",
+    "event": "grip_closed",
+    "f_left": 0.0,
+    "f_right": 0.0,
+    "n_contacts": 4
+   },
+   {
+    "t": 108.532,
+    "phase": "lift",
+    "event": "lifted",
+    "clear_cm": 8.4,
+    "tightenings": 0,
+    "grip_tilt_deg": 0.0
+   },
+   {
+    "t": 111.532,
+    "phase": "hold",
+    "event": "hold_done",
+    "clear_cm": 8.2
+   },
+   {
+    "t": 167.434,
+    "phase": "move",
+    "event": "over_tray",
+    "ee": [
+     -1.147,
+     0.266,
+     0.09
+    ],
+    "grip_tilt_deg": 0.0
+   },
+   {
+    "t": 169.934,
+    "phase": "release",
+    "event": "grip_opened"
+   },
+   {
+    "t": 172.934,
+    "phase": "verify",
+    "event": "verify_done",
+    "obj": [
+     -1.203,
+     0.291,
+     0.05
+    ]
+   },
+   {
+    "t": 174.634,
+    "phase": "retreat_done",
+    "event": "retreat_up"
+   }
+  ],
+  "curve": [
+   [
+    0,
+    0,
+    0,
+    0,
+    35000,
+    "nav_to_A"
+   ],
+   [
+    45,
+    0,
+    0,
+    0,
+    35000,
+    "nav_to_A"
+   ],
+   [
+    90,
+    0,
+    0,
+    0,
+    35000,
+    "nav_to_A"
+   ],
+   [
+    101.5,
+    0,
+    0,
+    0,
+    35000,
+    "grasp"
+   ],
+   [
+    102.8,
+    1.95,
+    1.4,
+    0,
+    35000,
+    "grasp"
+   ],
+   [
+    106.0,
+    1.95,
+    1.4,
+    0,
+    24000,
+    "grasp"
+   ],
+   [
+    108.5,
+    2.16,
+    1.4,
+    8.4,
+    12000,
+    "lift"
+   ],
+   [
+    111.5,
+    2.16,
+    1.4,
+    8.2,
+    12000,
+    "hold"
+   ],
+   [
+    111.6,
+    2.16,
+    1.4,
+    8.2,
+    12000,
+    "carry_to_B"
+   ],
+   [
+    133,
+    2.16,
+    1.4,
+    8.2,
+    12000,
+    "carry_to_B"
+   ],
+   [
+    156.2,
+    2.16,
+    1.4,
+    8.2,
+    12000,
+    "carry_to_B"
+   ],
+   [
+    167.4,
+    2.16,
+    1.4,
+    8.0,
+    12000,
+    "move"
+   ],
+   [
+    172.9,
+    0,
+    0,
+    0,
+    35000,
+    "release"
+   ],
+   [
+    174.6,
+    0,
+    0,
+    0,
+    35000,
+    "verify"
+   ]
+  ],
+  "metrics": {
+   "hold_min_clear_cm": 8.23,
+   "lift_peak_cm": 8.42,
+   "max_finger_force_N": 2.16,
+   "slip_max_mm": 52.7,
+   "tightenings": 0,
+   "mug_final_xy": [
+    -1.203,
+    0.291
+   ],
+   "mug_final_z": 0.05,
+   "mug_final_speed_ms": 0.0,
+   "in_region": false,
+   "unexpected_arm_contacts": 0,
+   "sim_t": 174.63
+  }
+ },
+ "legacy_f6": {
+  "fixed": {
+   "n": 15,
+   "grasp": 10,
+   "task": 10,
+   "rate": 0.667,
+   "fmax": 5.55
+  },
+  "feedback": {
+   "n": 15,
+   "grasp": 10,
+   "task": 10,
+   "rate": 0.667,
+   "fmax": 5.55
+  }
+ }
+}
